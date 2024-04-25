@@ -19,7 +19,7 @@ namespace Services.Repositories.Implementation
 
     public async Task<List<OrderBook>> LoadOrderBooksFromFilesAsync()
     {
-      string filePath = @"C:\Users\anzer.CREA\Desktop\TO USB\Code\Customer\BSDigital\MetaExchange\Data\order_books_data";
+      string filePath = Path.Combine(AppContext.BaseDirectory, "order_books_data");
       string substringToFind = "\"Bids\":";
 
       List<OrderBook> result = new List<OrderBook>();
